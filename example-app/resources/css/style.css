@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css?family=Heebo:300,400,500,700|Roboto:300,400,500");
+
+body {
+    line-height: 24px;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    color: #797979;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Heebo", sans-serif;
+    color: #2a2a2a;
+    font-weight: 500;
+}
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+del {
+    color: #797979;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: "Heebo", sans-serif;
+}
+.list {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+a {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
