@@ -17,4 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('/')->group(function () {
     //page index
     Route::get('/melody', [ClientController::class, 'index'])->name('index');
+    Route::get('/getAllCategories', [ClientController::class, 'getAllCategories']);
+
 });
