@@ -1,0 +1,118 @@
+.header {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: var(--fixed);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow khi không scroll */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng chuyển động */
+}
+
+.top .left p {
+    display: inline-block;
+    color: var(--text-color);
+    font-size: var(--tiny-font-size);
+    font-weight: var(--font-semi-bold);
+    border-right: 1px solid #797979;
+    padding: 0rem 1.25rem;
+}
+
+.top .left p:last-child {
+    border-right: none;
+}
+
+.top .right_side {
+    float: right;
+}
+
+.top .right_side li {
+    display: inline-block;
+}
+
+.top .right li:last-child a {
+    border-right: 0rem;
+}
+
+.top .right_side li a {
+    color: var(--text-color);
+    font-size: var(--tiny-font-size);
+    font-weight: var(--font-semi-bold);
+    border-right: 1px solid #797979;
+    padding: 0rem 1.25rem;
+}
+
+.top .right_side li:hover a {
+    color: var(--title-color-dark);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.05); /* Box shadow xám xung quanh khi hover */
+}
+
+.logo{
+    border-radius: 1rem;
+}
+.left,
+.right {
+    margin-bottom: 1.25rem;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.navbar-nav .nav-item {
+    margin-right: 10px;
+}
+
+.custom-search {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.custom-search input {
+    width: 300px;
+    padding: 8px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 25px;
+    box-shadow: 0 0 0.5px rgba(0, 0, 0, 0.05);
+}
+/* Ẩn submenu mặc định */
+#menu-container ul {
+    display: none;
+}
+
+/* Hiển thị submenu khi hover vào thẻ cha */
+#menu-container li:hover > ul {
+    display: block;
+}
+/* Ẩn submenu mặc định */
+.dropdown-menu ul {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%; /* Hiển thị bên phải của menu cha */
+}
+
+/* Hiển thị submenu khi hover vào thẻ cha */
+.submenu:hover ul {
+    display: block;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.dropdown-toggle:hover {
+    color: var(--title-color-dark);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.05); /* Box shadow xám xung quanh khi hover */
+}
+.header.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}

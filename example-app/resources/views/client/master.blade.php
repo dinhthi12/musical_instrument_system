@@ -9,8 +9,8 @@
     {{-- Chỉ định bộ mã ký tự của tài liệu là UTF-8. --}}
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     {{-- Đặt các thuộc tính viewport để thiết kế đáp ứng. --}}
-    <link rel="icon" href="{{ URL::asset('images/logo.svg') }}" />
-    {{-- Liên kết đến một biểu tượng favicon được đặt tại 'public/images/logo.svg'. --}}
+    <link rel="icon" href="{{ URL::asset('/assets/logo.svg') }}" />
+    {{-- Liên kết đến một biểu tượng favicon được đặt tại 'assets/logo.svg'. --}}
     <title>@yield('title', 'Melody')</title>
     {{-- Đặt tiêu đề của tài liệu HTML.
          Phần @yield('title') là một giữ chỗ sẽ được thay thế bằng tiêu đề thực tế trong các chế độ xem con. --}}
@@ -23,6 +23,7 @@
          Trong quá trình phát triển, Vite có thể giúp tăng tốc quá trình phát triển và cung cấp các tính năng như hot module replacement (HMR) để tự động làm mới trang khi có thay đổi trong mã nguồn. --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     {{-- Bao gồm tệp CSS Font Awesome từ một CDN để tạo kiểu biểu tượng. --}}
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
 </head>
 
 <body>
