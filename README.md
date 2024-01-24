@@ -1,15 +1,42 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://github.com/dinhthi12/musical_instrument_system/assets/73831236/b6caa22f-6d95-467b-8333-7616e1c6c7c1" alt="Logo"></a></p>
+<p align="center"><a href="#" target="_blank"><img src="" alt="Logo"></a></p>
 
-### 1. DESCRIPTION
-#### Melody is an e-commerce website that integrates additional features including blogs, news about musical instruments, and consultation on courses musical
 
-### 2. TECHNIQUES APPLIED TO THE PROJECT
-- Use Vue for highly optimized static content generation
-- Customized Bootstrap and jQuery
-- Applied I18n and partial for the website
-- Call API providers, districts, and wards
 
-### 3. DOCUMENTATION
-[Documentation](https://laravel.com/docs/contributions)
-### 4. DEMO
-[Here](https://www.youtube.com/channel/UCK9nL1AikfpMvRTwed0NDxQ)
+# Music website
+
+Melody is an e-commerce website that integrates additional features including blogs, news about musical instruments, and consultation on courses musical.
+
+
+## Tech Stack
+
+**Client:** Blade, Bootstrap, css, Javascript, Vite
+
+**Server:** Laravel, Mysql, JWT, REST API
+
+**Design pattern:** MVC
+
+**Other techniques:** Partial, Clean code, I18n, Write documentation and more
+
+## Feedback
+
+If you have any feedback, please reach out to us at thi884641@gmail.com
+
+
+## Documentation
+
+[Documentation](https://www.youtube.com/channel/UCK9nL1AikfpMvRTwed0NDxQ)
+
+## Demo
+
+[Demo](https://www.youtube.com/channel/UCK9nL1AikfpMvRTwed0NDxQ)
+
+
+## Contributing
+
+Contributions are always welcome!
+
+
+## Authors
+
+- [Đình Thi](https://github.com/dinhthi12)
+- [Nguyễn Hoàng](https://github.com/hoangpt1310)
