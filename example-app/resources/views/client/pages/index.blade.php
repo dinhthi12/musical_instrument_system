@@ -1,3 +1,5 @@
 @extends('client.master')
-@section('title', getPageTitle( __('title.welcome')))
+@section('title', getPageTitle(__('trans.welcome')))
 @section('content')
+
+@endsection

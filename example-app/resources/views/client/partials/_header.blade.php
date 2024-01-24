@@ -1,78 +1,101 @@
-<header class="header sticky">
-    <div class="row top container">
-        <div class="col-lg-6">
-            <div class="left">
-                <p>Kênh người bán</p>
-                <p>Tải ứng dụng</p>
-                <p>Kết nối &nbsp
-                    <i class="fa fa-facebook-official" aria-hidden="true"></i> &nbsp
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                </p>
-            </div>
-        </div>
-        <div class="col-lg-6">
-            <div class="right">
-                <ul class="right_side">
-                    <li class="nav-item submenu dropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                        <a href="#">
-                            Ngôn ngữ &nbsp
-                            <i class="fa fa-language" aria-hidden="true"></i>
-                        </a>
+<header id="header" class="">
+    <section class="headtop">
+        <div class="container">
+            <div class="row">
+                <ul class="menutop">
+                    <li>
+                        <a href="https://tongkhonhaccu.com/tai-sao-mua-hang-tai-tygy-shop.html"
+                            title="{{ trans('trans.header.title-why') }}">
+                            {{ trans('trans.header.title-why') }}</a>
                     </li>
-                    <ul class="dropdown-menu">
-                        <li class="nav-item"><a class="nav-link" href="#">Action</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Another action</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Something else here</a></li>
-                    </ul>
-                    <li><a href="#">Thông báo &nbsp <i class="fa fa-bell-o" aria-hidden="true"></i></a></li>
-                    <li><a href="#">Đăng Ký</a></li>
-                    <li><a href="#">Đăng nhập</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <nav class="navbar navbar-expand-lg w-100">
-            <a class="navbar-brand" href="{{ route('index') }}">
-                <img class="logo" src="{{ asset('assets/logo.svg') }}" width="80px" alt="" />
-            </a>
-            <div class="collapse navbar-collapse offset w-100" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 pull-left" id="menu-container">
-                    @foreach ($allCate as $cate)
-                        <li class="nav-item submenu dropdown">
-                            <a href="#" class="nav-link dropdown-toggle">{{ $cate->category_name }}</a>
-                            @if ($cate->children->count() > 0)
-                                {{-- Sử dụng đệ quy để xây dựng submenu --}}
-                                <ul class="dropdown-menu">
-                                    @foreach ($cate->children as $subcategory)
-                                        <li class="nav-item submenu dropdown">
-                                            <a href="#"
-                                                class="nav-link dropdown-toggle">{{ $subcategory->category_name }}</a>
-                                            @if ($subcategory->children->count() > 0)
-                                                {{-- Đệ quy --}}
-                                                @include('client/partials/submenu', [
-                                                    'subcategories' => $cate->children,
-                                                ])
-                                            @endif
-                                        </li>
-                                    @endforeach
-                                </ul>
-                            @endif
-                        </li>
-                    @endforeach
-                </ul>
-                <div class="custom-search">
-                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                </div>
-                <ul class="nav navbar-nav navbar-right right_nav pull-right">
 
-                    <li class="nav-item">
-                        <a href="#" class="icons">
-                            <i class="fa fa-shopping-cart"></i>
-                        </a>
+                    <li>
+                        <a href="https://tongkhonhaccu.com/loi-ich-khi-su-dung-tai-khoan-mua-hang.html"
+                            title={{ trans('trans.header.title-benefit') }}"> {{ trans('trans.header.title-benefit') }}</a>
+                    </li>
+
+                    <li>
+                        <a href="https://tongkhonhaccu.com/tra-cuu-don-hang.html"
+                            title="{{ trans('trans.header.title-status') }}"> {{ trans('trans.header.title-status') }}</a>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"
+                                title="{{ trans('trans.header.title-language') }}">{{ trans('trans.header.title-language') }}
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{ route('index', ['locale' => 'vi']) }}"">{{ trans('trans.header.language.vn') }}</a></li>
+                                <li><a href="{{ route('index', ['locale' => 'ja']) }}"">{{ trans('trans.header.language')['ja'] }}</a></li>
+                                <li><a href="{{ route('index', ['locale' => 'en']) }}"">{{ trans('trans.header.language.en') }}</a></li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </div>
-        </nav>
-    </div>
+        </div>
+    </section>
+
+
+    <section class="headmiddle">
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    <h1 class="logotext">
+                        TYGY - Tổng kho Guitar, Piano | Organ, Ukulele, Phụ kiện chính
+                        hãng
+                    </h1>
+                    <a href="/" target="" rel="nofollow"><img alt="Logo"
+                            src="{{ asset('/assets/logo.svg') }}" /></a>
+                </div>
+
+                <form method="post" class="headsearch" onsubmit="doSearch(); return false;">
+                    <input type="text" class="topinput" name="keyword" id="keyword"
+                        onkeyup="get_search(this.value)" maxlength="50" placeholder="{{ trans('trans.header.placeholder-search') }}"
+                        autocomplete="off" />
+                    <div id="search-autocomplete"></div>
+                    <button type="button" class="btntop" onclick="doSearch(); return false;">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+                <div class="notify-box fr">
+                    <ul>
+                        <li class="login">
+                            <a href="https://www.tongkhonhaccu.com/dang-nhap.html" title="Đăng nhập" rel="nofollow">
+                                <span class="fa fa-user"> </span>
+                                <label>{{ trans('trans.header.label.signin') }}</label>
+                            </a>
+                            <a href="/dang-ky.html" title="Đăng ký" rel="nofollow">
+                                <span class="fa fa-user-plus"> </span>
+                                <label>{{ trans('trans.header.label.signup') }}</label>
+                            </a>
+                        </li>
+
+                        <li class="cart-hea">
+                            <a href="https://www.tongkhonhaccu.com/gio-hang.html?returnpath=&combo=" title="Giỏ hàng"
+                                rel="nofollow">
+                                <span class="fa fa-shopping-cart">
+                                    <i>0</i>
+                                </span>
+                                <label>{{ trans('trans.header.label.cart') }}</label>
+                            </a>
+                        </li>
+                        <li class="hotline-li">
+                            <a href="javascript:void(0)" title="Hotline" rel="nofollow">
+                                <span class="fa fa-phone"><i>{{ trans('trans.header.hotline') }}</i></span>
+                                <label>
+                                    <p class="red bold">
+                                        0796.69.2773 (Đà Nẵng)
+                                    </p>
+                                    <p class="red bold">
+                                        0926.345.294 (Huế)
+                                    </p>
+                                </label>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
 </header>

@@ -89,4 +89,8 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Address::class, 'user_addresses', 'user_id', 'address_id');
     }
+    public function newfeeds()
+    {
+        return $this->hasMany(Newfeed::class, 'user_id');
+    }
 }
