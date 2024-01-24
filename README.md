@@ -1,4 +1,4 @@
-<p align="center"><a href="#" target="_blank"><img src="" alt="Logo"></a></p>
+<p align="center"><a href="#" target="_blank"><img src="https://github.com/dinhthi12/musical_instrument_system/assets/73831236/c253e134-7f24-45e2-b7b9-426ee5722165" alt="Logo" height="350px"></a></p>
 
 
 
@@ -9,13 +9,15 @@ Melody is an e-commerce website that integrates additional features including bl
 
 ## Tech Stack
 
-**Client:** Blade, Bootstrap, css, Javascript, Vite
+**CLIENT:** Blade, Bootstrap, CSS, Javascript, Vite
 
-**Server:** Laravel, Mysql, JWT, REST API
+**SERVER:** Laravel, Mysql, JWT, REST API
 
-**Design pattern:** MVC
+**DESIGN PATTERN:** MVC
 
-**Other techniques:** Partial, Clean code, I18n, Write documentation and more
+**GIT FLOW:** Perform tasks with GIT such as pull requests, push, merging multiple commits into 1 commit, and self-checking
+
+**OTHER TECHNIQUES:** Partial, Clean code, I18n, Write documentation and more
 
 ## Feedback
 
