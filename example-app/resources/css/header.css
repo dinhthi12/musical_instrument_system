@@ -163,12 +163,166 @@ ul.menutop li a:hover {
     right: -13px;
 }
 
-.sub-menu {
-    display: none;
-    /* Ẩn ul mặc định */
+.wh-menu {
+    background: #fdd504;
+    z-index: 999;
+    position: relative;
+    margin-bottom: 1px;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.2);
+}
+.wh-menu .container {
+    padding: 0;
+    position: relative;
 }
 
-.active .sub-menu {
+ul.navmenu {
+    width: 100%;
+    float: left;
+}
+ul.navmenu > li {
+    text-align: center;
+    padding: 0 8px;
+    float: left;
+}
+ul.navmenu > li:last-child ul.submenu {
+    left: inherit;
+    right: 0;
+    min-width: 240px;
+}
+ul.navmenu > li > a {
+    font-weight: 300;
+    line-height: 20px;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
     display: block;
-    /* Hiển thị ul khi có lớp active */
+    padding: 8px 10px 3px;
+    overflow: hidden;
+    font-size: 12px;
+    color: #211f1f;
+}
+ul.navmenu > li > a * {
+    cursor: pointer;
+    font-weight: 300;
+}
+ul.navmenu > li > a i.fa {
+    font-size: 16px;
+}
+ul.navmenu > li > a > span {
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    position: relative;
+    display: table;
+    vertical-align: middle;
+    margin-bottom: 2px;
+}
+ul.navmenu > li > a > span img {
+    display: inline-block;
+    max-height: 30px;
+}
+ul.navmenu > li > a > label {
+    margin: 0;
+    font-weight: bold;
+    font-size: 12px;
+}
+ul.navmenu > li::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #d21212;
+    transform: scale(0, 1);
+    transform-origin: left center 0;
+    transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+}
+ul.navmenu > li:hover::after,
+ul.navmenu > li.active::after {
+    transform: scale(1, 1);
+}
+.sub-menu {
+    display: none;
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 5px 7px -1px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    top: 100%;
+    left: 0;
+    text-align: left;
+    width: 100%;
+    z-index: 9999;
+}
+.nsm-title {
+    color: #f36f20;
+    font-size: 14px;
+    padding-bottom: 10px;
+    background: url("./images/bg-sub-title.png") repeat-x bottom left;
+    font-weight: bold;
+}
+ul.nsm-list {
+    list-style: none;
+    margin-top: 15px;
+    width: 100%;
+    overflow: hidden;
+}
+ul.nsm-list > li {
+    line-height: 29px;
+    border-bottom: 1px solid #eaeaea;
+    float: left;
+    height: 29px;
+    overflow: hidden;
+}
+ul.nsm-list > li > a {
+    font-size: 12px;
+    display: block;
+    color: #333;
+    text-transform: none;
+}
+ul.nsm-list > li > a:hover {
+    color: #c91010;
+}
+ul.nsm-list-2 li {
+    width: 45%;
+    margin-right: 10%;
+}
+ul.nsm-list-2 li:nth-child(2n + 2) {
+    margin-right: 0;
+}
+ul.nsm-only > li {
+    width: 100%;
+}
+.img-msm img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    top: 0;
+}
+.navmenu li:hover .sub-menu {
+    display: block;
+}
+.big-banner {
+    padding-top: 10px;
+    float: right;
+    width: 100%;
+    min-height: 280px;
+}
+.big-bn-left {
+    float: left;
+    width: 65.834%;
+}
+.big-bn-right {
+    float: right;
+    width: 33.33%;
+}
+.big-bn-right img {
+    width: 100%;
+}
+.big-bn-right ul li:nth-child(2) {
+    margin-top: 0px;
+}
+.big-banner img {
+    width: 100%;
 }

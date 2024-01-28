@@ -19,5 +19,8 @@ return [
             'cart' => 'Cart'
         ],
         'hotline' => 'Hotline',
-    ]
+    ],
+    'category' => 'Category :category',
+    'new' => 'Hot news',
+    'see' => 'See more...'
 ];

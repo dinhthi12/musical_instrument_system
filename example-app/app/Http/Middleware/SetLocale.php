@@ -16,11 +16,17 @@ class SetLocale
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $locale = $request->segment(1); // Lấy ngôn ngữ từ đoạn URL
+        $locale = $request->segment(1); // Get the first segment from the URL
 
-        if (in_array($locale, ['en', 'ja', 'vi'])) {
-            App::setLocale($locale); // Đặt ngôn ngữ
-        }
+        // Validate if the obtained locale is a valid language code
+        $validLocales = ['vi', 'en', 'ja']; // Add other valid language codes
+        $locale = in_array($locale, $validLocales) ? $locale : 'vi';
+
+        App::setLocale($locale);
+
+        // Pass the locale to the session if needed
+        session(['locale' => $locale]);
+
         return $next($request);
     }
 }

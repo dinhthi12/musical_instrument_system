@@ -61,8 +61,8 @@ a:focus {
     text-decoration: none;
 }
 a {
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none !important;
+    color: inherit ;
     background-color: transparent;
     -webkit-transition: all 200ms ease-out;
     -moz-transition: all 200ms ease-out;

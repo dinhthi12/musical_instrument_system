@@ -19,5 +19,9 @@ return [
             'cart' => 'giỏ hàng'
         ],
         'hotline' => 'Hotline',
-    ]
+    ],
+    'category' => 'Danh mục: :category',
+    'new' => 'Tin mới nhất',
+    'see' => 'Xem thêm...'
+
 ];
