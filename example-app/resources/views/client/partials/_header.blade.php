@@ -11,22 +11,32 @@
 
                     <li>
                         <a href="https://tongkhonhaccu.com/loi-ich-khi-su-dung-tai-khoan-mua-hang.html"
-                            title={{ trans('trans.header.title-benefit') }}"> {{ trans('trans.header.title-benefit') }}</a>
+                            title={{ trans('trans.header.title-benefit') }}">
+                            {{ trans('trans.header.title-benefit') }}</a>
                     </li>
 
                     <li>
                         <a href="https://tongkhonhaccu.com/tra-cuu-don-hang.html"
-                            title="{{ trans('trans.header.title-status') }}"> {{ trans('trans.header.title-status') }}</a>
+                            title="{{ trans('trans.header.title-status') }}">
+                            {{ trans('trans.header.title-status') }}</a>
                     </li>
                     <li>
                         <div class="dropdown">
+                            <i class="fa fa-language" aria-hidden="true"></i>
                             <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"
                                 title="{{ trans('trans.header.title-language') }}">{{ trans('trans.header.title-language') }}
                             </a>
+
                             <ul class="dropdown-menu">
-                                <li><a href="{{ route('index', ['locale' => 'vi']) }}"">{{ trans('trans.header.language.vn') }}</a></li>
-                                <li><a href="{{ route('index', ['locale' => 'ja']) }}"">{{ trans('trans.header.language')['ja'] }}</a></li>
-                                <li><a href="{{ route('index', ['locale' => 'en']) }}"">{{ trans('trans.header.language.en') }}</a></li>
+                                <li><a
+                                        href="{{ route('index', ['locale' => 'vi']) }}">{{ trans('trans.header.language.vn') }}</a>
+                                </li>
+                                <li><a
+                                        href="{{ route('index', ['locale' => 'ja']) }}">{{ trans('trans.header.language.ja') }}</a>
+                                </li>
+                                <li><a
+                                        href="{{ route('index', ['locale' => 'en']) }}">{{ trans('trans.header.language.en') }}</a>
+                                </li>
                             </ul>
                         </div>
                     </li>
@@ -41,7 +51,7 @@
             <div class="row">
                 <div class="logo">
                     <h1 class="logotext">
-                        TYGY - Tổng kho Guitar, Piano | Organ, Ukulele, Phụ kiện chính
+                        MELODY - Tổng kho Guitar, Piano | Organ, Ukulele, Phụ kiện chính
                         hãng
                     </h1>
                     <a href="/" target="" rel="nofollow"><img alt="Logo"
@@ -50,8 +60,8 @@
 
                 <form method="post" class="headsearch" onsubmit="doSearch(); return false;">
                     <input type="text" class="topinput" name="keyword" id="keyword"
-                        onkeyup="get_search(this.value)" maxlength="50" placeholder="{{ trans('trans.header.placeholder-search') }}"
-                        autocomplete="off" />
+                        onkeyup="get_search(this.value)" maxlength="50"
+                        placeholder="{{ trans('trans.header.placeholder-search') }}" autocomplete="off" />
                     <div id="search-autocomplete"></div>
                     <button type="button" class="btntop" onclick="doSearch(); return false;">
                         <i class="fa fa-search"></i>
@@ -98,4 +108,46 @@
             </div>
         </div>
     </section>
+
+    <nav class="wh-menu">
+        <div class="container">
+            <ul class="navmenu">
+
+                @foreach ($allCate as $cate)
+                    <li>
+                        <a href="#">
+                            <span><img src="{{ asset('/assets/menu/' . $cate->category_image) }}"
+                                    alt="{{ $cate->category_name }}">{{ $cate->category_name }}</span>
+                        </a>
+                        @if ($cate->children->count() > 0)
+                            <div class="sub-menu">
+                                <div class="msm-col col-md-6">
+                                    <h3 class="nsm-title">
+                                        {{ trans('trans.category', ['category' => $cate->category_name]) }}</h3>
+                                    <ul class="nsm-list nsm-list-2">
+
+                                        {{-- Sử dụng đệ quy để xây dựng submenu --}}
+
+                                        @foreach ($cate->children as $subcategory)
+                                            <li>
+
+                                                <a href="#">{{ $subcategory->category_name }}</a>
+                                                @if ($subcategory->children->count() > 0)
+                                                    {{-- Đệ quy --}}
+                                                    @include('client/partials/submenu', [
+                                                        'subcategories' => $cate->children,
+                                                    ])
+                                                @endif
+                                            </li>
+                                        @endforeach
+
+                                </div>
+                            </div>
+                        @endif
+                    </li>
+                @endforeach
+
+            </ul>
+        </div>
+    </nav>
 </header>

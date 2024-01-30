@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::prefix('{locale}')->middleware('web')->group(function () {
+Route::prefix('{locale?}')->middleware('web')->group(function () {
     Route::get('/melody', [ClientController::class, 'index'])->name('index');
     // Thêm các route khác tương ứng
 });
+// Route::get('/{locale}/melody', [ClientController::class, 'index'])->name('index');
