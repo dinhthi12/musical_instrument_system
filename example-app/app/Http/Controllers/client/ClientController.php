@@ -21,7 +21,10 @@ class ClientController extends Controller
             ->whereNull('parent_id')
             ->where('locale', app()->getLocale())
             ->get();
-        $allNewsFeed = Newfeeds_translations::all()->where('locale', app()->getLocale());
+        $allNewsFeed = Newfeeds_translations::where('locale', app()->getLocale())
+            ->latest('created_at') // Sắp xếp theo ngày tạo mới nhất
+            ->take(4)              // Lấy 4 tin tức
+            ->get();
         return view('client.pages.index', ['allCate' => $allCate, 'allNewsFeed' => $allNewsFeed]);
     }
 }

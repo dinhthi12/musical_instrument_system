@@ -22,7 +22,7 @@ return [
     ],
     'category' => 'Category :category',
     'new' => 'Hot news',
-    'see' => 'See more...',
+    'see' => 'See more news...',
     'videoShopping' => 'Video Shopping',
     'subscribe' => 'Subscribe',
     'youtube' => 'Youtube',

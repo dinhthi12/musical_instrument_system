@@ -1,12 +1,12 @@
 <div class="big-bn-right">
     <div class="title-homenew">
         <h2 class="txt">
-            <a href="https://tongkhonhaccu.com/tin-tuc.html">{{ trans('trans.new') }}</a>
+            {{-- tin-tuc.html --}}
+            <a href="#">{{ trans('trans.new') }}</a>
         </h2>
         <div class="listEvent">
             <p>
-                <a
-                    href="https://tongkhonhaccu.com/mau-dan-organ-yamaha-psre473-thoa-man-moi-nhu-cau-am-nhac-cua-ban.html">
+                <a href="#">
                     {{ trans('trans.see') }}
                 </a>
             </p>

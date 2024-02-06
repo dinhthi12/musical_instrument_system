@@ -1,3 +1,4 @@
+/* start header top */
 .headtop {
     line-height: 35px;
     background-color: #f3f3f3;
@@ -20,7 +21,8 @@ ul.menutop li a {
 ul.menutop li a:hover {
     color: #eac817;
 }
-
+/* end header top */
+/* start logo*/
 .headmiddle {
     width: 100%;
     background: #fff;
@@ -45,13 +47,16 @@ ul.menutop li a:hover {
     max-height: 70px;
     border-radius: 20px;
 }
+/* end logo*/
+/* start search*/
 .headsearch {
     float: left;
     width: 30%;
     height: 40px;
     margin: 15px 0 0 0;
     background: #fff;
-    position: relative; /* border-radius:4px;*/
+    position: relative;
+    /* border-radius:4px;*/
     /* -webkit-border-radius:4px;*/
     -moz-border-radius: 4px;
     border: 1px solid #e8e8e8;
@@ -95,6 +100,8 @@ ul.menutop li a:hover {
     line-height: 30px;
     vertical-align: middle;
 }
+/* end search */
+/* start icon sign in/ sign up/ cart */
 .iconltd-cart {
     background-position: -89px 6px;
     width: 26px;
@@ -162,7 +169,8 @@ ul.menutop li a:hover {
     top: -10px;
     right: -13px;
 }
-
+/* end icon sign in/ sign up/ cart */
+/* start navbar */
 .wh-menu {
     background: #fdd504;
     z-index: 999;
@@ -242,6 +250,8 @@ ul.navmenu > li:hover::after,
 ul.navmenu > li.active::after {
     transform: scale(1, 1);
 }
+/* end navbar*/
+/*start sub navbar*/
 .sub-menu {
     display: none;
     position: absolute;
@@ -303,26 +313,82 @@ ul.nsm-only > li {
 .navmenu li:hover .sub-menu {
     display: block;
 }
-.big-banner {
-    padding-top: 10px;
-    float: right;
-    width: 100%;
-    min-height: 280px;
+/*end sub navbar*/
+/*plugin*/
+.plugin-box {
+    position: fixed;
+    right: 25px;
+    bottom: 85px;
+    z-index: 9999;
 }
-.big-bn-left {
-    float: left;
-    width: 65.834%;
+
+.plugin-control {
+    margin: 10px 0 0;
+    position: relative;
 }
-.big-bn-right {
-    float: right;
-    width: 33.33%;
+
+.plugin-title {
+    display: none;
+    border-radius: 5px;
+    white-space: nowrap;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px !important;
+    position: absolute;
+    top: 0;
+    right: 50px;
+    font-size: 12px !important;
+    background: rgba(29, 36, 62, 0.7);
+    color: #fff;
 }
-.big-bn-right img {
-    width: 100%;
+
+.plugin-title::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -5px;
+    right: -10px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent rgba(29, 36, 62, 0.7) transparent transparent !important;
+    transform: rotateZ(-180deg);
 }
-.big-bn-right ul li:nth-child(2) {
-    margin-top: 0px;
+
+.plugin-a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
 }
-.big-banner img {
-    width: 100%;
+
+.plugin-control:hover .plugin-title {
+    display: block;
 }
+
+.plugin-a.contact {
+    background: url(images/contact.svg) no-repeat center center / 40px 40px;
+    background-color: #f7a400;
+}
+
+.plugin-a.zalo {
+    background: url(images/zalo.svg) no-repeat center center / 40px 40px;
+    background-color: #f7a400;
+}
+
+.plugin-a.facebook {
+    background: url(images/facebook.svg) no-repeat center center / 40px 40px;
+    background-color: #0068ff;
+}
+
+.plugin-a.call {
+    background: url(images/call.svg) no-repeat center center / 40px 40px;
+    background-color: #0068ff;
+}
+
+.plugin-a.scroll {
+    background: url(images/scroll-top.png) no-repeat center center / 40px 40px;
+    background-color: #f7a400;
+}
+/*end plugin*/

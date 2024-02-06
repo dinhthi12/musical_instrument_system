@@ -22,7 +22,7 @@ return [
     ],
     'category' => 'カテゴリ: :category',
     'new' => 'ニュース',
-    'see' => '続きを見る...',
+    'see' => 'ニュースをもっと見る...',
     'videoShopping' => '動画ショッピング',
     'subscribe' => '購読する',
     'youtube' => 'ユーチューブ',
