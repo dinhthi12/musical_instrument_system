@@ -22,7 +22,7 @@ return [
     ],
     'category' => 'Danh mục: :category',
     'new' => 'Tin mới nhất',
-    'see' => 'Xem thêm...',
+    'see' => 'Xem thêm các tin tức khác...',
     'videoShopping' => 'Video Shopping',
     'subscribe' => 'Theo dõi',
     'youtube' => 'YouTube',

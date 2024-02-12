@@ -5,9 +5,9 @@
     <div class="container-main">
         <div class="container">
             <section class="big-banner">
-             @include('client/partials/_slides')
-             @include('client/partials/_newsfeed')
-             @include('client/partials/_video')
+             @include('client/pages/partials/_slides')
+             @include('client/pages/partials/_newsfeed')
+             @include('client/pages/partials/_video')
             </section>
         </div>
     </div>
