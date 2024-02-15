@@ -8,9 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-    use HasTranslations;
+    use HasFactory;
     protected $fillable = ['category_name', 'category_image', 'parent_id'];
-    public $translatable = ['category_name', 'category_image'];
     // Quan hệ với chính nó (danh mục cha)
     public function parent()
     {
@@ -27,10 +26,5 @@ class Category extends Model
     public function subcategories()
     {
         return $this->hasMany(Category::class, 'category_id');
-    }
-
-    public function translations()
-    {
-        return $this->hasMany(Category_translations::class);
     }
 }

@@ -1,7 +1,7 @@
-@foreach ($subcategory->children as $grandchild)
+@foreach ($subcategory['children'] as $grandchild)
     <li>
-        <a href="#">{{ $grandchild->category_name }}</a>
-        @if ($subcategory->children->count() > 0)
+        <a href="#">{{ $grandchild['category_name'] }}</a>
+        @if (!empty($subcategory['children']))
         @endif
     </li>
 @endforeach

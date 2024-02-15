@@ -8,6 +8,7 @@
              @include('client/pages/partials/_slides')
              @include('client/pages/partials/_newsfeed')
              @include('client/pages/partials/_video')
+             @include('client/pages/partials/_productSale')
             </section>
         </div>
     </div>
