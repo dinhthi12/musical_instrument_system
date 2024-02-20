@@ -15,21 +15,23 @@
     </div>
     <ul class="list-new-home">
         @foreach ($allNewsFeed as $newsFeed)
-            <li>
-                <div class="box-thumbnail">
-                    <p class="hm-reponsive">
-                        <a href="#" title="#">
-                            <img src="{{ asset('/assets/newsfeed/' . $newsFeed->featured_image) }}" title="#"
-                                alt="#" />
-                        </a>
-                    </p>
-                </div>
-                <h3>
-                    {{ trans($newsFeed->headline) }}
-                </h3>
-                <span class="recent-date">{{ $newsFeed->created_at }}</span>
-                <a href="#" class="alink-all" title="{{ trans($newsFeed->headline) }}" rel="nofollow"></a>
-            </li>
+            @if (is_array($newsFeed))
+                <li>
+                    <div class="box-thumbnail">
+                        <p class="hm-reponsive">
+                            <a href="#" title="#">
+                                <img src="{{ asset('/assets/newsfeed/' . $newsFeed['featured_image']) }}" title="#"
+                                    alt="#" />
+                            </a>
+                        </p>
+                    </div>
+                    <h3>
+                        {{ $newsFeed['headline'] }}
+                    </h3>
+                    <span class="recent-date">{{ $newsFeed['created_at'] }}</span>
+                    <a href="#" class="alink-all" title="{{ $newsFeed['headline'] }}" rel="nofollow"></a>
+                </li>
+            @endif
         @endforeach
     </ul>
 </div>
